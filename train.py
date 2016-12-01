@@ -17,7 +17,7 @@ def main():
                 m = TextModel(config, inputs)
 
         with tf.name_scope("valid"):
-            valid_inputs = Inputs(batch_size=84, capacity=800, train=False)
+            valid_inputs = Inputs(batch_size=256, capacity=1200, train=False)
             with tf.variable_scope("model", reuse=True):
                 mvalid = TextModel(config, valid_inputs)
 
